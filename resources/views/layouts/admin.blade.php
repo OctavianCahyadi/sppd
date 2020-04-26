@@ -118,9 +118,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div class="content-wrapper">
     <div class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
+        <div class="row mb-1">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">{{$judul}}</h1>
+            <h1 class="mb-0 text-dark">{{$judul}}</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -159,5 +159,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset("/bower_components/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js"  )}}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset("/bower_components/admin-lte/dist/js/adminlte.min.js"  )}}"></script>
+<script>
+  $('#delete').on('show.bs.modal', function (event){
+   var button = $(event.relatedTarget)
+   var dataid = button.data('id')
+   var modal=$(this)
+   modal.find('.modal-body #id').val(dataid);
+  })
+  </script>
 </body>
 </html>

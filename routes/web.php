@@ -26,6 +26,10 @@ Route::group(['middleware'=>'auth'],function(){
     Route::get('/pegawai','PegawaiController@index')->name('pegawai');
     Route::get('/create-pegawai','PegawaiController@create')->name('create-pegawai');
     Route::post('/store-pegawai','PegawaiController@store')->name('store-pegawai');
+    Route::get('/edit-pegawai/{id}','PegawaiController@edit')->name('edit-pegawai');
+    Route::post('/update-pegawai/{id}','PegawaiController@update')->name('update-pegawai');    
+    Route::delete('/delete-pegawai/{id}','PegawaiController@delete')->name('delete-pegawai');
+    Route::get('/cari-pegawai','PegawaiController@cari')->name('cari-pegawai'); 
 
     Route::get('/sppd','SppdController@index')->name('sppd');
     Route::get('/setting','SettingController@index')->name('setting');
