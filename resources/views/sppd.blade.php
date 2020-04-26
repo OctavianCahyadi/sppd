@@ -1,4 +1,4 @@
-@extends('layouts.admin',['module'=>'SPPD'])
+@extends('layouts.admin',['module'=>'SPPD','judul'=>'Surat Perintah Perjalanan Dinas'])
 @section('title')
     <title>SPPD</title>
 @endsection

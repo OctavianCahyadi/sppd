@@ -1,4 +1,4 @@
-@extends('layouts.admin',['module'=>'PPTK'])
+@extends('layouts.admin',['module'=>'PPTK','judul'=>'Petugas Pelaksana Teknis Kegiatan'])
 @section('title')
     <title>PPTK</title>
 @endsection

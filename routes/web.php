@@ -22,7 +22,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware'=>'auth'],function(){
     Route::get('/dashboard','PageController@dashboard')->name('dashboard');
+
     Route::get('/pegawai','PegawaiController@index')->name('pegawai');
+    Route::get('/create-pegawai','PegawaiController@create')->name('create-pegawai');
+    Route::post('/store-pegawai','PegawaiController@store')->name('store-pegawai');
+
     Route::get('/sppd','SppdController@index')->name('sppd');
     Route::get('/setting','SettingController@index')->name('setting');
     Route::get('/pptk','PptkController@index')->name('pptk');
