@@ -33,5 +33,11 @@ Route::group(['middleware'=>'auth'],function(){
 
     Route::get('/sppd','SppdController@index')->name('sppd');
     Route::get('/setting','SettingController@index')->name('setting');
+
     Route::get('/pptk','PptkController@index')->name('pptk');
+    Route::get('/create-pptk','PptkController@create')->name('create-pptk');
+    Route::post('/store-pptk/{id}','PptkController@store')->name('store-pptk');
+    Route::delete('/delete-pptk/{id}','PptkController@delete')->name('delete-pptk');
+    Route::get('/cari-pegawai-pptk','PptkController@cari')->name('cari-pegawai-pptk'); 
+    
 });

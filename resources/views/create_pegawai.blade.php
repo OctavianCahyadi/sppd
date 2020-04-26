@@ -1,6 +1,6 @@
 @extends('layouts.admin',['module'=>'Pegawai','judul'=>'Tambah Data Pegawai'])
 @section('title')
-    <title>Pegawai</title>
+    <title>Tambah Pegawai</title>
 @endsection
 @section('content')
 
