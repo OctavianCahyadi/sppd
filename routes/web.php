@@ -25,4 +25,5 @@ Route::group(['middleware'=>'auth'],function(){
     Route::get('/pegawai','PegawaiController@index')->name('pegawai');
     Route::get('/sppd','SppdController@index')->name('sppd');
     Route::get('/setting','SettingController@index')->name('setting');
+    Route::get('/pptk','PptkController@index')->name('pptk');
 });

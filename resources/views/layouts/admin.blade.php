@@ -86,13 +86,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <li class="nav-item ">
             <a {{ $module == "Pegawai" ? 'id=active' : ''}} href="/pegawai" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
-              <p>Pegawai</p>
+              <p>Data Pegawai</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a {{ $module == "PPTK" ? 'id=active' : ''}} href="/pptk" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>Data PPTK</p>
             </a>
           </li>
           <li class="nav-item">
             <a {{ $module == "SPPD" ? 'id=active' : ''}} href="/sppd" class="nav-link">
               <i class="nav-icon fas fa-list-alt"></i>
-              <p>SPPD</p>
+              <p>Data SPPD</p>
             </a>
           </li>
           <li class="nav-item">
