@@ -33,11 +33,20 @@ Route::group(['middleware'=>'auth'],function(){
 
     Route::get('/sppd','SppdController@index')->name('sppd');
     Route::get('/setting','SettingController@index')->name('setting');
+    Route::get('/edit-setting/{id}','SettingController@edit')->name('edit-setting');
+    Route::get('/edit-setting-anggaran/{id}','SettingController@editanggaran')->name('edit-setting-anggaran');
+    Route::post('/update-setting-anggaran/{id}','SettingController@updateAnggaran')->name('update-anggaran'); 
+    Route::post('/update-setting-kadis/{id}','SettingController@updateKadis')->name('update-kadis'); 
+    Route::post('/update-setting-bendahara/{id}','SettingController@updateBendahara')->name('update-bendahara'); 
+    Route::get('/cari-pegawai-setting','SettingController@cari')->name('cari-pegawai-setting'); 
 
     Route::get('/pptk','PptkController@index')->name('pptk');
     Route::get('/create-pptk','PptkController@create')->name('create-pptk');
     Route::post('/store-pptk/{id}','PptkController@store')->name('store-pptk');
     Route::delete('/delete-pptk/{id}','PptkController@delete')->name('delete-pptk');
     Route::get('/cari-pegawai-pptk','PptkController@cari')->name('cari-pegawai-pptk'); 
+
+    Route::get('/user','UserController@index')->name('user');
+    Route::delete('/delete-user/{id}','UserController@delete')->name('delete-user');
     
 });
