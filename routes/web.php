@@ -31,7 +31,7 @@ Route::group(['middleware'=>'auth'],function(){
     Route::delete('/delete-pegawai/{id}','PegawaiController@delete')->name('delete-pegawai');
     Route::get('/cari-pegawai','PegawaiController@cari')->name('cari-pegawai'); 
 
-    Route::get('/sppd','SppdController@index')->name('sppd');
+    
     Route::get('/setting','SettingController@index')->name('setting');
     Route::get('/edit-setting/{id}','SettingController@edit')->name('edit-setting');
     Route::get('/edit-setting-anggaran/{id}','SettingController@editanggaran')->name('edit-setting-anggaran');
@@ -49,4 +49,8 @@ Route::group(['middleware'=>'auth'],function(){
     Route::get('/user','UserController@index')->name('user');
     Route::delete('/delete-user/{id}','UserController@delete')->name('delete-user');
     
+    Route::get('/sppd','SppdController@index')->name('sppd');
+    Route::get('/create-sppd','SppdController@create')->name('create-sppd');
+    Route::post('/store-sppd','SppdController@store')->name('store-sppd');
+    Route::get('/edit-sppd/{id}','SppdController@edit')->name('edit-sppd');
 });
