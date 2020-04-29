@@ -55,8 +55,11 @@
                     </div>      
                     <div class="form-group">
                         <label for="exampleInputEmail1">Angkutan</label>
-                        <input name="angkutan" class="form-control"  placeholder="Masukkan angkutan" value="{{ old('angkutan',$sppd->angkutan ?? '') }}" required>
-                    </div>   
+                        <select name="angkutan" class="form-control" style="width: 100%;" required>
+                            <option value="Dinas"selected>Dinas</option>
+                            <option value="Umum" >Umum</option>
+                         </select>
+                    </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Tempat Berangkat</label>
                         <input name="tempat_berangkat" class="form-control"  placeholder="Masukkan tempat berangkat" value="{{ old('tempat_berangkat',$sppd->tempat_berangkat ?? 'Bantul') }}" required>
@@ -70,6 +73,10 @@
                 <!-- /.box-header -->
                 <!-- form start -->        
                 <div class="box-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Dasar SPPD</label>
+                    <input name="dasar" class="form-control" placeholder="Masukkan dasar sppd" value="{{ old('dasar',$sppd->dasar ?? '') }}" >
+                    </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Lama Perjalanan</label>
                     <input name="lama" class="form-control" placeholder="Masukkan lama perjalanan" value="{{ old('lama',$sppd->lama ?? '') }}" required>
@@ -113,15 +120,17 @@
                         <label for="exampleInputEmail1">Jabatan Petugas Lapangan</label>
                         <input name="jabatan_petugas" class="form-control"  placeholder="Masukkan jabatan petugas" value="{{ old('jabatan_petugas',$sppd->jabatan_petugas ?? '') }}" >
                     </div>
-                
-                        <div class="box-footer mt-5 text-center">
-                            <button type="submit" class="btn btn-primary">{{$tombol}}</button>
-                         </div>
+                        
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="container">
+        <div class="col-md-10">
+        <div class="box-footer mb-4 text-center">
+            <button type="submit" class="btn btn-primary">{{$tombol}}</button>
+         </div>
+        </div>
     </div>
 </div>
 </div>

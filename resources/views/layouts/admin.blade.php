@@ -15,8 +15,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/dist/css/adminlte.min.css") }}">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
+  
   <!-- Standalone -->
   <link href="{{ asset("/bower_components/datepicker/dist/css/datepicker.min.css") }}" rel="stylesheet" >
   <!-- For Bootstrap 4 -->
@@ -190,6 +189,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
    var modal=$(this)
    modal.find('.modal-body #id').val(dataid);
   })
+
+  $('.cetak').on('show.bs.modal', function (event){
+   var button = $(event.relatedTarget)
+   var dataid = button.data('idcetak')
+   var modal=$(this)
+    
+   var container = document.getElementById('buttonContainer');
+   var a = document.createElement('a');
+   var a2 = document.createElement('a');
+   a.textContent = 'Cetak SPPD Depan';
+   a.className='btn btn-block btn-warning';
+   a.style='color:white;'
+   a.target='_blank';
+    
+  // Buttons don't have an href. You need to set up a click event handler
+   a.href = '/cetak_sppd/'+dataid;
+   container.appendChild(a);
+
+   a2.textContent = 'Cetak SPPD Belakang';
+   a2.className='btn btn-block btn-warning';
+   a2.style='color:white;'
+   a2.target='_blank';
+    
+  // Buttons don't have an href. You need to set up a click event handler
+   a2.href = '/cetak_sppd_belakang/'+dataid;
+   container.appendChild(a2);
+  }); 
+
   const elem = document.querySelector('input[id="datepicker"]');
   const datepicker = new Datepicker(elem, {
         // options here

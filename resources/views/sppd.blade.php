@@ -3,6 +3,7 @@
     <title>SPPD</title>
 @endsection
 @section('content')
+<div class="container">
 <div class="row">
     <div class="col-md-12">
         <div class="container">
@@ -28,7 +29,8 @@
                 <th>Tanggal Pergi</th>
                 <th>Acara</th>
                 <th>Tujuan</th>
-                <th>Edit</th>
+                <th class="text-center">Edit</th>
+                <th class="text-center">Cetak</th>
                 <th class="text-center">  DELETE  </th>
               </thead>
              <tbody>
@@ -39,8 +41,11 @@
                      <td>{{$row->tgl_pergi }}</td>
                      <td>{{$row->acara }}</td>
                      <td>{{$row->tujuan }}</td>
-                     <td>
+                     <td class="text-center">
                         <a href="/edit-sppd/{{$row->id}}" class="btn btn-success">EDIT</a>
+                     </td>
+                     <td class="text-center">
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-backdrop="static" data-target="#modal-sm" data-idcetak="{{ $row->id }}">CETAK</button>
                      </td>
                      <td class="text-center">
                       <button class="btn btn-danger" data-toggle="modal" data-id="{{ $row->id }}" data-target="#delete"><i class="fas fa-trash"></i> </button>
@@ -69,6 +74,35 @@
                       </div>
                     </div>
                   </div>
+                  <!-- Modal SMALL -->
+                  <div class="modal fade cetak" id="modal-sm">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">Cetak SPPD</h4>                          
+                        </div>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                        <script>
+                          $(document).ready(function(){
+                            $("#buttonclose").click(function(){
+                              $("#buttonContainer").empty();
+                            });
+                          });
+                        </script>
+                        <div class="modal-body">   
+                          <div id="buttonContainer">
+                          </div>
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                          <button type="button" class="btn btn-default" id="buttonclose" data-dismiss="modal" >Close</button>
+                          
+
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                  </div>
                 @endforeach
             </tbody>
             </table>
@@ -80,5 +114,5 @@
       </div>
     </div> 
   </div>   
- 
+</div>
 @endsection

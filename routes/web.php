@@ -53,4 +53,13 @@ Route::group(['middleware'=>'auth'],function(){
     Route::get('/create-sppd','SppdController@create')->name('create-sppd');
     Route::post('/store-sppd','SppdController@store')->name('store-sppd');
     Route::get('/edit-sppd/{id}','SppdController@edit')->name('edit-sppd');
+    Route::delete('/delete-sppd/{id}','SppdController@delete')->name('delete-sppd');
+    Route::post('/update-sppd/{id}','SppdController@update')->name('update-sppd'); 
+    
+    Route::get('/tambah-pegawai-sppd','PegawaiSppdController@store')->name('cari-pegawai-sppd');
+    Route::get('/create-pegawai-sppd/{id}','PegawaiSppdController@create')->name('create-pegawai-sppd');
+    Route::delete('/delete-petugas-sppd/data','PegawaiSppdController@delete')->name('delete-pegawai-sppd');
+
+    Route::get('/cetak_sppd/{id}','SppdController@cetak')->name('cetak-sppd');
+
 });

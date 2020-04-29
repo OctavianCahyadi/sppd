@@ -27,6 +27,7 @@ class CreateTableSppd extends Migration
             $table->integer('pptk');
             $table->integer('daerah');
             $table->integer('anggaran');
+            $table->string('dasar')->nullable();
             $table->string('nama_petugas')->nullable();
             $table->string('nip_petugas')->nullable();
             $table->string('jabatan_petugas')->nullable();         
