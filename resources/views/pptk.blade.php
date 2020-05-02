@@ -58,7 +58,7 @@
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
                                 <p>Anda benar-benar ingin menghapus data ini ? Data yang sudah dihapus tidak dapat dikembalikan</p>
-                                <input type="text" name="datadelete" id="id" value="">
+                                <input type="hidden" name="datadelete" id="id" value="">
                                 </div>
                                 <div class="modal-footer">
                                 <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>

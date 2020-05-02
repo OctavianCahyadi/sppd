@@ -58,7 +58,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="position: fixed;">
     <!-- Brand Logo -->
     <div class="container text-center">
     <a href="index3.html" class="brand-link text-center">
@@ -68,7 +68,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </a>
   </div>
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar" >
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-1 mb-0 text-center">
         <div class="info center">
@@ -79,7 +79,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" > 
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->   
             <style>
@@ -162,7 +162,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      DinPar Kabupaten Bantul 
+      Developed by OctavianCahyadi <strong><a href="mailto:octaviancahyadi@gmail.com?subject=Getting Toch">Contact me</a></strong>
     </div>
     <!-- Default to the left -->
     <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
