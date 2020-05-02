@@ -34,23 +34,26 @@
                 <th class="text-center">  DELETE  </th>
               </thead>
              <tbody>
-               @foreach ($sppd as $row)
-                 <tr>
-                     <td>{{$row->id}}</td>
-                     <td>{{$row->tgl_surat}}</td>
-                     <td>{{$row->tgl_pergi }}</td>
-                     <td>{{$row->acara }}</td>
-                     <td>{{$row->tujuan }}</td>
-                     <td class="text-center">
+                         
+               @forelse ($sppd as $row)
+                  <tr>
+                      <td>{{$row->id}}</td>
+                      <td>{{$row->tgl_surat}}</td>
+                      <td>{{$row->tgl_pergi }}</td>
+                      <td>{{$row->acara }}</td>
+                      <td>{{$row->tujuan }}</td>
+                      <td class="text-center">
                         <a href="/edit-sppd/{{$row->id}}" class="btn btn-success">EDIT</a>
-                     </td>
-                     <td class="text-center">
+                      </td>
+                      <td class="text-center">
                       <button type="button" class="btn btn-info" data-toggle="modal" data-backdrop="static" data-target="#modal-sm" data-idcetak="{{ $row->id }}">CETAK</button>
-                     </td>
-                     <td class="text-center">
+                      </td>
+                      <td class="text-center">
                       <button class="btn btn-danger" data-toggle="modal" data-id="{{ $row->id }}" data-target="#delete"><i class="fas fa-trash"></i> </button>
-                    </td>
-                 </tr>
+                      </td>
+                  </tr>
+               
+                
                   <!-- Modal HTML -->
                   <div id="delete" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-confirm">
@@ -103,7 +106,9 @@
                     </div>
                     <!-- /.modal-dialog -->
                   </div>
-                @endforeach
+                  @empty
+                  <h4 class="text-center">Data Kosong</h4>
+                @endforelse
             </tbody>
             </table>
             <div class="d-flex justify-content-center">

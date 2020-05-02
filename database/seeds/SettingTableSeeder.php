@@ -16,6 +16,7 @@ class SettingTableSeeder extends Seeder
             'id_bendahara' => '4',
             'mata_anggaran' => 'APBD Kab.Bantul',
             'tahun_anggaran' => '2020',
-        ]);    
+        ]);   
+         
     }
 }
