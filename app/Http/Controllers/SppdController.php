@@ -102,4 +102,16 @@ class SppdController extends Controller
             'tugas'
         ));
     }
+    public function cetak_belakang($id){
+        $sppd= SPPD::findOrFail($id);
+        $setting= Setting::select()->get();
+        $pegawai= Pegawai::select()->get();
+        $tugas= Tugas::orderBy('created_at','ASC')->where('id_sppd',$id)->get();
+        
+        return view('cetak_sppd_belakang',compact(
+            'sppd','setting','pegawai',
+            'tugas'
+        ));
+    }
+
 }

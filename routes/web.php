@@ -61,5 +61,6 @@ Route::group(['middleware'=>'auth'],function(){
     Route::delete('/delete-petugas-sppd/data','PegawaiSppdController@delete')->name('delete-pegawai-sppd');
 
     Route::get('/cetak_sppd/{id}','SppdController@cetak')->name('cetak-sppd');
+    Route::get('/cetak_sppd_belakang/{id}','SppdController@cetak_belakang')->name('cetak-sppd-belakang');
 
 });
