@@ -27,12 +27,9 @@
                       <input class="btn btn-info ml-4" type="submit" value="Tambah">
                       <a href="/sppd" class="btn btn-success ml-5" style="color:white;">Selesai </a>
                     </div>
-                   
                 </div>              
             </form> 
-                   
         </div>
-        
         <div class="card-body">
           <div class="table-responsive">
             <table class="table">
