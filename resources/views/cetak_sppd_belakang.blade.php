@@ -161,28 +161,28 @@ $pdf->SetTitle('Cetak SPPD Belakang');
 $pdf->AddPage('P','');
 //$pdf->SetMargins(0,0,0);
 $pdf->SetFont('Arial','',12);
-$pdf->Cell(85,5,'',0,0);
+$pdf->Cell(75,5,'',0,0);
 $pdf->Cell(5,5,'I.',0,0);
 $pdf->Cell(40,5,'SPPD Nomor',0,0,'L');
 $pdf->Cell(70,5,': '.$nosurat,0,1,'L');
 
-$pdf->Cell(90,5,'',0,0);
+$pdf->Cell(80,5,'',0,0);
 $pdf->Cell(40,5,'Berangkat dari',0,0,'L');
 $pdf->Cell(70,5,': Bantul ',0,1,'L');
 
 
-$pdf->Cell(90,5,'',0,0);
+$pdf->Cell(80,5,'',0,0);
 $pdf->Cell(40,5,'(Tempat Kedudukan)',0,0,'L');
 $pdf->Cell(200,5,'',0,1);
 $pdf->Cell(70,5,'',0,1,'L');
-$pdf->Cell(90,5,'',0,0);
+$pdf->Cell(80,5,'',0,0);
 $pdf->Cell(40,5,'Pada Tanggal',0,0,'L');
 $pdf->Cell(70,5,': '.$berangkat,0,1,'L');
 
-$pdf->Cell(90,5,'',0,0);
+$pdf->Cell(80,5,'',0,0);
 $pdf->Cell(40,5,'Ke',0,0,'L');
 $pdf->Cell(2,5,':',0,0);
-$pdf->MultiCell(60,5,$tempat_tujuan,0,1);
+$pdf->MultiCell(70,5,$tempat_tujuan,0,'L',false);
 $bawah=27;
 $atas=41;
 $counter=strlen($tempat_tujuan);
@@ -321,6 +321,11 @@ $pdf->Cell(28,5,'Kepala',0,0);
 $pdf->Cell(2,5,':',0,0);
 $pdf->Cell(58,5, '',0,1);
 
+$Y=$pdf->GetY()+5;
+$pdf->SetLineWidth(0.5);
+$pdf->Line (30,$Y-2,209,$Y-2);
+$pdf->SetLineWidth(0.2);
+
 $pdf->Cell(0,5,'',0,1);
 $pdf->Cell(200,8,'',0,1,'');
 $pdf->Cell(90,6,'V.',0,0,'R');
@@ -351,10 +356,10 @@ $pdf->Cell(200,8,'',0,1,'');
 $pdf->Cell(200,8,'',0,1,'');
 $pdf->Cell(90,6,'',0,0,'R');
 $pdf->SetFont('Arial','U',12);
-$pdf->Cell(110,6,'Kwintarto Heru Prabowo, S.Sos',0,1,'C');
+$pdf->Cell(110,6,$kadis,0,1,'C');
 $pdf->SetFont('Arial','',12);
 $pdf->Cell(90,6,'',0,0,'R');
-$pdf->Cell(110,6,'NIP. 197204131998031008',0,1,'C');
+$pdf->Cell(110,6,'NIP. '.$nipkadis,0,1,'C');
 $Y=$pdf->GetY()+3;
 $pdf->Line (30,$Y-2,209,$Y-2);
 $pdf->Cell(20,8,'V.  ',0,0,'R');
