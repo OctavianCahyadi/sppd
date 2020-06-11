@@ -173,7 +173,7 @@ $pdf->Cell(70,5,': Bantul ',0,1,'L');
 
 $pdf->Cell(80,5,'',0,0);
 $pdf->Cell(40,5,'(Tempat Kedudukan)',0,0,'L');
-$pdf->Cell(200,5,'',0,1);
+
 $pdf->Cell(70,5,'',0,1,'L');
 $pdf->Cell(80,5,'',0,0);
 $pdf->Cell(40,5,'Pada Tanggal',0,0,'L');
@@ -190,7 +190,7 @@ $counter2=strlen($sppd->jabatan_petugas);
 
 
 
-
+$pdf->Cell(0,2,'',0,1);
 $pdf->SetFont('Arial','',12);
 $pdf->Cell(120,6,'',0,0);
 $pdf->Cell(80,6,'Pejabat Pelaksana Teknis Kegiatan',0,1,'C');
@@ -221,7 +221,10 @@ $pdf->MultiCell(58,5,$tempat_tujuan,0,1);
 $pdf->SetXY($x + 58, $y);
 $pdf->Cell(30,5,'Berangkat dari',0,0);
 $pdf->Cell(2,5,':',0,0);
-$pdf->MultiCell(60,5,$tempat_tujuan,0,1);
+$pdf->MultiCell(55,5,$tempat_tujuan,0,1);
+$x = $pdf->GetX();
+$y = $pdf->GetY();
+$pdf->SetXY($x, $y);
 $pdf->Cell(25,5,'',0,0);
 $pdf->Cell(27,5,'Pada Tanggal',0,0);
 $pdf->Cell(2,5,':',0,0);
@@ -245,9 +248,6 @@ $pdf->SetXY($x + 80, $y);
 $pdf->Cell(12,5,'',0,0);
 $pdf->MultiCell(90,5,$sppd->jabatan_petugas,0,1);
 
-
-
-$pdf->Cell(0,5,'',0,1);
 $pdf->Cell(0,5,'',0,1);
 $pdf->Cell(20,5,'',0,0);
 $pdf->Cell(80,5,$sppd->nama_petugas,0,0);

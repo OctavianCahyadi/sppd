@@ -92,12 +92,13 @@ function myCell($w,$h,$x,$t)
   foreach ($tugas as $key) {
     foreach ($pegawai as $item) {
          if ($item->id == $key->id_pegawai) {
-            if($key->golongan > 3){
+            if($item->golongan > 3){
                  $gaji=$tunjangan2;
+                 $temp=$sppd->lama*$gaji;
             }else {
                  $gaji=$tunjangan1;
-            };
-            $temp=$sppd->lama*$gaji;
+                 $temp=$sppd->lama*$gaji;
+            };            
             $totaluang=$totaluang+$temp;
         }
     }    
@@ -266,7 +267,7 @@ $pdf->SetTitle('Cetak SPPD');
     $pdf->Cell(170,4,'Rp '.number_format($totaluang).' -, ('.terbilang($totaluang).' Rupiah)',0,1);
     //new line
     $pdf->Cell(32,4,'Untuk Pembayaran',0,0);;$pdf->Cell(2,4,':',0,0);
-    $pdf->MultiCell(0,6,$acara.' di '.$tempat_tujuan.' yang dilaksanakan pada tanggal '.$berangkat,0,1);
+    $pdf->MultiCell(0,4,$acara.' di '.$tempat_tujuan.' yang dilaksanakan pada tanggal '.$berangkat,0,1);
 
 
     if ($sppd->anggaran=='1') {
