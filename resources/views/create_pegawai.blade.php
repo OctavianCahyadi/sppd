@@ -31,7 +31,11 @@
             <div class="form-group">
                 <label for="exampleInputEmail1">Golongan</label>
                 <input name="golongan" class="form-control"  placeholder="Masukkan golongan" value="{{ old('golongan',$pegawai->golongan ?? '') }}" required>
-            </div>                                 
+            </div>    
+            <div class="form-group">
+                <label for="exampleInputEmail1">Eselon</label>
+                <input name="eselon" class="form-control"  placeholder="Masukkan Eselon" value="{{ old('eselon',$pegawai->eselon ?? '') }}" required>
+            </div>                              
         </div>
         <!-- /.box-body -->
 

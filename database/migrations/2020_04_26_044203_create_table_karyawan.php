@@ -20,6 +20,7 @@ class CreateTableKaryawan extends Migration
             $table->string('jabatan');
             $table->string('pangkat');
             $table->string('golongan');
+            $table->string('eselon');
             $table->timestamps();
         });
     }

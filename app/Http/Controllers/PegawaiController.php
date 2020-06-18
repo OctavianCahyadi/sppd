@@ -34,6 +34,7 @@ class PegawaiController extends Controller
         $pegawai->jabatan=$request->jabatan;
         $pegawai->pangkat=$request->pangkat;
         $pegawai->golongan=$request->golongan;
+        $pegawai->eselon=$request->eselon;
         $pegawai->save();
 
         return redirect('/pegawai')->with('success','Data Pegawai berhasil ditambahkan.');
@@ -46,6 +47,7 @@ class PegawaiController extends Controller
         $pegawai->jabatan=$request->jabatan;
         $pegawai->pangkat=$request->pangkat;
         $pegawai->golongan=$request->golongan;
+        $pegawai->eselon=$request->eselon;
         $pegawai->save();
 
         return redirect('/pegawai')->with('success','Data Pegawai berhasil diubah.');

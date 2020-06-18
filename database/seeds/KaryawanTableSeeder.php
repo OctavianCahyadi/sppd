@@ -18,6 +18,7 @@ class KaryawanTableSeeder extends Seeder
                 'jabatan' => 'Kepala Dinas Pariwisata Kab. Bantul',
                 'pangkat' => 'Pembina Utama Muda IV/c',
                 'golongan' => '4',
+                'eselon' => '4',
             ],
             [
                 'nama' => 'Dra. Annihayah, M.Eng',
@@ -25,6 +26,7 @@ class KaryawanTableSeeder extends Seeder
                 'jabatan' => 'Sekretaris Dinas Pariwisata Kab. Bantul',
                 'pangkat' => 'Pembina Tingkat 1 IV/b',
                 'golongan' => '4',
+                'eselon' => '4',
             ],
             [
                 'nama' => 'Endri Astuti, SIP',
@@ -32,6 +34,7 @@ class KaryawanTableSeeder extends Seeder
                 'jabatan' => 'Kepala Sub Bag. Umum dan Kepegawaian',
                 'pangkat' => 'Penata III/c',
                 'golongan' => '3',
+                'eselon' => '3',
             ],
             [
                 'nama' => 'Darochim Muharomah, S.M.',
@@ -39,6 +42,7 @@ class KaryawanTableSeeder extends Seeder
                 'jabatan' => 'Bendahara Pada Sub Bag. PKA Sekretariat Dinas Pariwisata',
                 'pangkat' => 'Pengatur II/c',
                 'golongan' => '2',
+                'eselon' => '0',
             ],
             [
                 'nama' => 'Setya Ardhana Tarigan Sibero, ST',
@@ -46,6 +50,7 @@ class KaryawanTableSeeder extends Seeder
                 'jabatan' => 'Ka.Si. Sarpras dan Usaha Jasa Pariwisata',
                 'pangkat' => 'Penata III /c',
                 'golongan' => '3',
+                'eselon' => '3',
             ],
             [
                 'nama' => 'Agus Yuli Herwanta, ST, MT',
@@ -53,6 +58,7 @@ class KaryawanTableSeeder extends Seeder
                 'jabatan' => 'Ka. Bid. Pengembangan Destinasi',
                 'pangkat' => 'Pembina IV /a',
                 'golongan' => '4',
+                'eselon' => '4',
             ],
             [
                 'nama' => 'Alexander Joko Wintolo, SH',
@@ -60,6 +66,7 @@ class KaryawanTableSeeder extends Seeder
                 'jabatan' => 'Kepala Seksi ODTW Bidang Pengembangan Destinasi',
                 'pangkat' => 'Penata TK I III/d',
                 'golongan' => '3',
+                'eselon' => '3',
             ],
             [
                 'nama' => 'Rr. Warih Ardia RD, A.Md',
@@ -67,6 +74,7 @@ class KaryawanTableSeeder extends Seeder
                 'jabatan' => 'Staf Seksi ODTW',
                 'pangkat' => 'Penata  III/c',
                 'golongan' => '3',
+                'eselon' => '0',
             ],
             [
                 'nama' => 'Ahmad Setiawan',
@@ -74,6 +82,7 @@ class KaryawanTableSeeder extends Seeder
                 'jabatan' => 'Staf Seksi Sarana Prasarana dan Usaha Jasa Pariwisata',
                 'pangkat' => 'Penata Muda Tk I III/b',
                 'golongan' => '3',
+                'eselon' => '0',
             ],
             [
                 'nama' => 'Intan Delima Nur B, SE',
@@ -81,6 +90,7 @@ class KaryawanTableSeeder extends Seeder
                 'jabatan' => 'Staf Seksi Sarana Prasarana dan Usaha Jasa Pariwisata',
                 'pangkat' => 'Penata III/c',
                 'golongan' => '3',
+                'eselon' => '0',
             ],
             [
                 'nama' => 'Muhammad Wijdan',
@@ -88,6 +98,7 @@ class KaryawanTableSeeder extends Seeder
                 'jabatan' => 'Staf Seksi ODTW',
                 'pangkat' => 'Pengatur Muda Tingakt 1 II/b',
                 'golongan' => '2',
+                'eselon' => '0',
             ],
             [
                 'nama' => 'Syarani Apriana Sukma Jati',
@@ -95,6 +106,7 @@ class KaryawanTableSeeder extends Seeder
                 'jabatan' => 'Staf Seksi ODTW',
                 'pangkat' => '-',
                 'golongan' => '0',
+                'eselon' => '0',
             ],
             [
                 'nama' => 'Hannik Hedayati, S.Pd',
@@ -102,6 +114,7 @@ class KaryawanTableSeeder extends Seeder
                 'jabatan' => 'Staf Seksi Sarana Prasarana dan Usaha Jasa Pariwisata',
                 'pangkat' => '-',
                 'golongan' => '0',
+                'eselon' => '0',
             ],
             [
                 'nama' => 'Dicky Fathur Rohman',
@@ -109,6 +122,7 @@ class KaryawanTableSeeder extends Seeder
                 'jabatan' => 'Staf Seksi Sarana Prasarana dan Usaha Jasa Pariwisata',
                 'pangkat' => '-',
                 'golongan' => '0',
+                'eselon' => '0',
             ],
 
         ]);    

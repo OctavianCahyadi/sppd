@@ -314,7 +314,7 @@ $pdf->SetTitle('Cetak SPPD');
             }if($item->golongan ==5){
                 $pdf->Cell(10,$hx1,'V','LR',0,'C');
             }
-            if($item->golongan >3){
+            if($item->eselon >2){
                 $gaji=$tunjangan2;
             }else {
                 $gaji=$tunjangan1;
