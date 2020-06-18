@@ -92,7 +92,7 @@ function myCell($w,$h,$x,$t)
   foreach ($tugas as $key) {
     foreach ($pegawai as $item) {
          if ($item->id == $key->id_pegawai) {
-            if($item->golongan > 3){
+            if($item->eselon > 2){
                  $gaji=$tunjangan2;
                  $temp=$sppd->lama*$gaji;
             }else {
